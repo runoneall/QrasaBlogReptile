@@ -1,7 +1,9 @@
 /rep.html
 /Feed.xml
 /Feed.json
+/About.json
 /ProcessFeed.json
 /Comments.json
+/test.py
 *.DS_Store
 **/__pycache__/*
