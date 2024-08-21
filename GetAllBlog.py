@@ -1,4 +1,5 @@
 import GetFeed
+import Config
 
-RssDoc = GetFeed.Get('https://blog.qrasa.cn/feed/')
+RssDoc = GetFeed.Get(Config.BlogRssFeed)
 
