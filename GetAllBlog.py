@@ -3,6 +3,7 @@
 import GetFeed
 import Config
 
+
 def Get() -> list[dict]:
     RssDoc = GetFeed.Get(Config.BlogRssFeed)
     Posts = RssDoc['entries']

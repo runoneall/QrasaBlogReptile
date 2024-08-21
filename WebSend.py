@@ -2,7 +2,8 @@
 
 import requests
 
-def Send(Url:str, Method:str='GET', **kwargs) -> str:
+
+def Send(Url: str, Method: str = 'GET', **kwargs) -> str:
     if Method == 'GET':
         rep_content = requests.get(url=Url)
         return rep_content.text

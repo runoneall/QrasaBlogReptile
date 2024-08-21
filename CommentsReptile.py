@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import GetAllBlog
 import WebSend
 
+
 def Get() -> list[dict]:
     print('Process Rss')
     AllBlog = GetAllBlog.Get()
@@ -13,7 +14,7 @@ def Get() -> list[dict]:
 
         BlogTitle = BlogInfo['title']
         BlogLink = BlogInfo['link']
-        
+
         print('Process', BlogTitle)
         PageContent = WebSend.Send(Url=BlogLink)
 
@@ -69,7 +70,7 @@ def Get() -> list[dict]:
 
             # add item
             OneCommentList.append(VisitorInfo)
-        
+
         # add item
         CommentList.append({BlogTitle: OneCommentList})
 
