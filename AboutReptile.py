@@ -3,7 +3,6 @@
 from bs4 import BeautifulSoup
 import WebSend
 import Config
-import WriteFile
 
 
 def Get():
@@ -56,6 +55,19 @@ def Get():
     div_tags = div_assets.find('div', {'class': 'site-state-tags'})
     div_tags = div_tags.find('span', {'class': 'site-state-item-count'})
     AuthorInfo['assets']['div_tags'] = div_tags.text
+
+    # links
+    div_links = AuthorCard.find('div', {'class': 'site-author-links'})
+    div_links = div_links.find_all('div', {'class': 'site-author-links-item'})
+
+    # load links
+    for div_link in div_links:
+        item_dict = dict()
+        a_tag = div_link.find('a')
+        a_text = a_tag.text[1:]
+        a_url = a_tag['href']
+        item_dict[a_text] = a_url
+        AuthorInfo['links'].append(item_dict)
 
     # return
     return AuthorInfo
