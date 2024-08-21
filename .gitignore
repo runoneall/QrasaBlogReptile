@@ -1,0 +1,5 @@
+/rep.html
+/Feed.xml
+/Feed.json
+*.DS_Store
+**/__pycache__/*
