@@ -5,3 +5,5 @@
 - `GetAllBlog.py` 获取博客所有文章的标题和链接并返回列表
 - `Config.py` 项目全局参数
 - `CommentsReptile.py` 爬取所有文章的评论
+
+[Qrasa博客地址](https://blog.qrasa.cn/), 此项目已经过授权
