@@ -9,6 +9,7 @@ import WriteFile
 def Get():
     AuthorInfo = dict()
     AuthorInfo['assets'] = dict()
+    AuthorInfo['links'] = list()
 
     # Process Blog About
     PageContent = WebSend.Send(Url=Config.BlogAbout)
