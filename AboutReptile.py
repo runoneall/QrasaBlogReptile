@@ -54,7 +54,7 @@ def Get():
     # tags assets
     div_tags = div_assets.find('div', {'class': 'site-state-tags'})
     div_tags = div_tags.find('span', {'class': 'site-state-item-count'})
-    AuthorInfo['assets']['div_tags'] = div_tags.text
+    AuthorInfo['assets']['tags'] = div_tags.text
 
     # links
     div_links = AuthorCard.find('div', {'class': 'site-author-links'})
