@@ -1,5 +1,6 @@
 /rep.html
 /Feed.xml
 /Feed.json
+/ProcessFeed.json
 *.DS_Store
 **/__pycache__/*

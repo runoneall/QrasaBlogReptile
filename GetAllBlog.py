@@ -1,5 +1,30 @@
+# Process Rss Dict And Return
+
+import json
 import GetFeed
 import Config
 
-RssDoc = GetFeed.Get(Config.BlogRssFeed)
+def Get() -> list[dict]:
+    RssDoc = GetFeed.Get(Config.BlogRssFeed)
+    Posts = RssDoc['entries']
 
+    ReturnPosts = list()
+    for Post in Posts:
+        OnePost = dict()
+        OnePost['title'] = Post['title']
+        OnePost['link'] = Post['link']
+        OnePost['author'] = Post['author']
+        OnePost['time'] = Post['published']
+        Tags = Post['tags']
+        OnePost['tags'] = list()
+        for Tag in Tags:
+            OneTag = dict()
+            OneTag['term'] = Tag['term']
+            OneTag['label'] = Tag['label']
+            OnePost['tags'].append(OneTag)
+        ReturnPosts.append(OnePost)
+
+    return ReturnPosts
+
+with open("./ProcessFeed.json", "w", encoding="utf-8") as f:
+    json.dump(Get(), f, ensure_ascii=False, indent=4)
