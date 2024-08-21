@@ -2,5 +2,6 @@
 /Feed.xml
 /Feed.json
 /ProcessFeed.json
+/Comments.json
 *.DS_Store
 **/__pycache__/*
