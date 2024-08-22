@@ -2,7 +2,9 @@
 
 - `WriteFile.py` 写文件
 - `WebSend.py` 发送Get或Post请求
+- `SendComment.py` 发送评论
 - `GetPostId.py` 获取文章Id
+- `GetLink.py` 通过标题获取文章链接
 - `GetFeed.py` 获取Rss内容并解析为字典
 - `GetComment.py` 获取评论内容
 - `GetAllComment.py` 获取所有文章评论内容

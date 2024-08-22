@@ -1,8 +1,10 @@
 from bs4 import BeautifulSoup
 import WebSend
+import GetLink
 
 
-def Get(Url:str) -> int:
+def Get(Title:str) -> int:
+    Url = GetLink.Get(Title)
     PageContent = WebSend.Send(Url=Url)
 
     # format to article
