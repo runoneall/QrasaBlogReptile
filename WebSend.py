@@ -11,3 +11,4 @@ def Send(Url: str, Method: str = 'GET', **kwargs) -> str:
         header = {} if 'header' not in kwargs else kwargs['header']
         data = kwargs['data']
         rep_content = requests.post(url=Url, headers=header, data=data)
+        return rep_content.text
